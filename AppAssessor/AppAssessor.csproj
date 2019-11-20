@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9EBD591-C36C-4CA4-8883-78F337DD04B1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppAssessor</RootNamespace>
+    <AssemblyName>AppAssessor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataStructures\Graph.cs" />
+    <Compile Include="DataStructures\GraphEdge.cs" />
+    <Compile Include="DataStructures\GraphNode.cs" />
+    <Compile Include="Forms\AssemblyAssessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssemblyAssessor.Designer.cs">
+      <DependentUpon>AssemblyAssessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssociationAssessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssociationAssessor.Designer.cs">
+      <DependentUpon>AssociationAssessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClassAssessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClassAssessor.Designer.cs">
+      <DependentUpon>ClassAssessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HierarchyAssessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HierarchyAssessor.Designer.cs">
+      <DependentUpon>HierarchyAssessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HomeScreen.Designer.cs">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InterfaceAssessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InterfaceAssessor.Designer.cs">
+      <DependentUpon>InterfaceAssessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AssemblyAssessment.cs" />
+    <Compile Include="Models\AssociationAssessment.cs" />
+    <Compile Include="Models\HierarchyAssessment.cs" />
+    <Compile Include="Models\InterfaceAssessment.cs" />
+    <Compile Include="Models\ClassAssessment.cs" />
+    <Compile Include="DataStructures\Tree.cs" />
+    <Compile Include="DataStructures\TreeNode.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AssemblyAssessor.resx">
+      <DependentUpon>AssemblyAssessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssociationAssessor.resx">
+      <DependentUpon>AssociationAssessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClassAssessor.resx">
+      <DependentUpon>ClassAssessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HierarchyAssessor.resx">
+      <DependentUpon>HierarchyAssessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomeScreen.resx">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InterfaceAssessor.resx">
+      <DependentUpon>InterfaceAssessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\association.png" />
+    <None Include="Resources\hierarchy.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\blue-butterfly-background.jpg" />
+    <None Include="AppData\settings2.jpg" />
+    <None Include="AppData\settings.png" />
+    <None Include="AppData\class.png" />
+    <None Include="AppData\assembly.jpg" />
+    <Content Include="AppData\background.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
